@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-czea$)c)s6$90q%xo4u+0gg==r20j@hx)l7g58d#rco954g1@j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,19 +80,9 @@ WSGI_APPLICATION = 'hospitalappointment.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
 
-        'NAME': 'hospital appointment booking',
-
-        'USER':'postgres',
-
-        'PASSWORD':'admin',
-
-        'HOST':'localhost',
-
-        'PORT':'5432' ,
-
-
+        'NAME': BASE_DIR/ 'db.splite3',
 
 
      }
