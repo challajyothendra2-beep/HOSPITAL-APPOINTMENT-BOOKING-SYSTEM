@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment History</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #6c5ce7;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f1f2f6;
+        }
+
+        .status {
+            padding: 6px 10px;
+            border-radius: 6px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .confirmed { background: #2ecc71; }
+        .pending { background: #f39c12; }
+        .cancelled { background: #e74c3c; }
+
+        .btn {
+            padding: 6px 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            font-size: 12px;
+        }
+
+        .cancel-btn { background: #e74c3c; }
+        .view-btn { background: #3498db; }
+
+    </style>
+</head>
+
+<body>
+
+<h1>📅 Appointment History</h1>
+
+<div class="container">
+
+    <table>
+        <tr>
+            <th>Patient Name</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment.name }}</td>
+            <td>Dr. {{ appointment.doctor.name }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.time }}</td>
+
+            <td>
+                <span class="status {{ appointment.status }}">
+                    {{ appointment.status }}
+                </span>
+            </td>
+
+            <td>
+                <a href="{% url 'view_appointment' appointment.id %}">
+                    <button class="btn view-btn">View</button>
+                </a>
+
+                {% if appointment.status != "cancelled" %}
+                <a href="{% url 'cancel_appointment' appointment.id %}">
+                    <button class="btn cancel-btn">Cancel</button>
+                </a>
+                {% endif %}
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No appointments found</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>

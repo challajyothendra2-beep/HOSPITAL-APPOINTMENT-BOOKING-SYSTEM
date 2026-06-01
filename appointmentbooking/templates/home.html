@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Home</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f7fc;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #007bff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Left side links */
+        .nav-left a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-left a:hover {
+            text-decoration: underline;
+        }
+
+        /* Right side buttons */
+        .nav-right a {
+            color: #007bff;
+            background: white;
+            padding: 8px 15px;
+            margin-left: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-right a:hover {
+            background: #e6e6e6;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Features */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 25%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        .card h3 {
+            color: #333;
+        }
+
+        .card p {
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+
+    <!-- Left side -->
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/book/">Book Appointment</a>
+        <a href="/admin/">Admin</a>
+    </div>
+
+    <!-- Right side -->
+    <div class="nav-right">
+        <a href="/login/">Login</a>
+        <a href="/register/">Register</a>
+    </div>
+
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to Hospital Booking System</h1>
+    <p>Book appointments with doctors easily and quickly</p>
+    <a href="/er/" class="btn">Book Now</a>
+</div>
+<!-- Features -->
+<div class="features">
+
+    <div class="card">
+        <h3>Doctor Profiles</h3>
+        <p>View doctor details and specialization</p>
+    </div>
+
+    <div class="card">
+        <h3>Easy Booking</h3>
+        <p>Schedule appointments in seconds</p>
+    </div>
+
+    <div class="card">
+        <h3>Appointment History</h3>
+        <p>Track all your previous visits</p>
+    </div>
+
+</div>
+
+</body>
+</html>

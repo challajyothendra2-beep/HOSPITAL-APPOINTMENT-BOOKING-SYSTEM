@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Profiles</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #2d3436;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .card {
+            width: 260px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-body h3 {
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+
+        .card-body p {
+            margin: 5px 0;
+            color: #636e72;
+            font-size: 14px;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 10px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #5f0bbd, #1f5fe0);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🩺 Our Doctors</h1>
+
+<div class="container">
+
+    <!-- Doctor 1 -->
+    <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg">
+        <div class="card-body">
+            <h3>Dr. Rahul Sharma</h3>
+            <p><strong>Specialization:</strong> Cardiologist</p>
+            <p><strong>Experience:</strong> 10 years</p>
+            <a href="/book/" class="btn">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Doctor 2 -->
+    <div class="card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        <div class="card-body">
+            <h3>Dr. Priya Reddy</h3>
+            <p><strong>Specialization:</strong> Dermatologist</p>
+            <p><strong>Experience:</strong> 7 years</p>
+            <a href="/book/" class="btn">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Doctor 3 -->
+    <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/65.jpg">
+        <div class="card-body">
+            <h3>Dr. Arjun Kumar</h3>
+            <p><strong>Specialization:</strong> Orthopedic</p>
+            <p><strong>Experience:</strong> 12 years</p>
+            <a href="/book/" class="btn">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Doctor 4 -->
+    <div class="card">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg">
+        <div class="card-body">
+            <h3>Dr. Sneha Patel</h3>
+            <p><strong>Specialization:</strong> Pediatrician</p>
+            <p><strong>Experience:</strong> 8 years</p>
+            <a href="/book/" class="btn">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Doctor 5 -->
+    <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/12.jpg">
+        <div class="card-body">
+            <h3>Dr. Vikram Singh</h3>
+            <p><strong>Specialization:</strong> Neurologist</p>
+            <p><strong>Experience:</strong> 15 years</p>
+            <a href="/book/" class="btn">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Doctor 6 -->
+    <div class="card">
+        <img src="https://randomuser.me/api/portraits/women/25.jpg">
+        <div class="card-body">
+            <h3>Dr. Kavya Nair</h3>
+            <p><strong>Specialization:</strong> Gynecologist</p>
+            <p><strong>Experience:</strong> 9 years</p>
+            <a href="/book/" class="btn">Book Appointment</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
